@@ -1,0 +1,63 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh; 
+}
+
+.left-half {
+    flex:2;
+    overflow: hidden;
+    position: relative;
+    background-image: url("./images/mecanico.png");
+    background-size:cover; 
+    font-style: none;
+}
+
+
+.right-half {
+    flex: 1; 
+    background-color: #ffffff; 
+}
+
+.ingreso{
+    border: 1px solid ;
+    background-color: #ff0000;
+    width: 300px;
+    height: 60px;
+    padding: 20px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.ingreso:hover{
+    background-color: #ff5b5b;    
+}
+
+
+input{
+    border: 1px black solid;
+    height: 40px;
+    width: 300px;
+    text-align: center;    
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.registro-form{
+    margin: auto;
+}
+
+.login{
+    position: relative;
+    top: 50px;
+    text-align: center;
+}

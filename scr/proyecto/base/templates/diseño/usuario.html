@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Citas</title>
+    <link type="text/css" href="{% static "css/base.css" %}" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="header">
+        <ul class="navtab">
+            <li><a href="{%url 'menu_recepcionista'%}">Inicio</a> </li> 
+            <li><a href="{%url 'lista_vehiculos_usuario'%}">Listar Vehiculos</a></li> 
+            <li><a href="{%url 'registrar_vehiculo'%}">Registrar Vehiculo</a></li>
+            <li><a href="{%url 'crear_cita'%}">Crear Cita</a></li> 
+            <li><a href="{%url 'listar_citas'%}">Ver Citas</a></li> 
+        </ul>
+        <div class="profile-name">
+            <a href="{% url 'ver_y_editar_perfil' %}" class="button-barra">
+                <img class="icon-barra" src="{% static 'css/svg/perfil.svg' %}" alt="">{{ user.username|capfirst }}
+            </a>
+            <a href="{% url 'logout' %}" class="button-barra">
+                <img class="icon-barra" src="{% static 'css/svg/cerrar_sesion.svg' %}" alt="">Cerrar sesión
+            </a>
+        </div>
+    </div>
+    <div class="content">
+        {% block content %} 
+        {% endblock content %}
+    </div>
+</body>
+</html>
+
+
+

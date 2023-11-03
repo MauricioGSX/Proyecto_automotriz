@@ -1,0 +1,24 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link type="text/css" href="{% static "css/registro.css" %}" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="left-half">
+            <div class="centered-button">
+            </div>
+        </div>
+        <div class="right-half">
+            {% block content %}
+            {% endblock content %}
+
+        </div>
+    </div>
+</body>
+</html>

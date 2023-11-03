@@ -1,0 +1,30 @@
+{% extends "diseño/recepcion.html" %}
+{% load static %}
+{% block content %}
+<div class="agenda-diaria-container">
+    <h1 class="agenda-diaria-heading">Agenda Diaria</h1>
+    <table class="agenda-diaria-table">
+        <thead>
+            <tr>
+                <th>Vehículo</th>
+                <th>Hora</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for cita in citas_hoy %}
+            <tr>
+                <td>{{ cita.vehiculo }}</td>
+                <td>{{ cita.horario }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="2" class="agenda-diaria-no-citas">No hay citas agendadas para hoy.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{% url 'menu_recepcionista' %}" class="button-atras">
+        <img class="icon-atras" src="{% static 'css/svg/cancelar.svg' %}" alt="">Volver Pagina Principal
+    </a>
+</div>
+{% endblock %}

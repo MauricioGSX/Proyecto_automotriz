@@ -1,0 +1,22 @@
+{% extends "diseño/recepcion.html" %}
+{% load static %}
+{% block content %}
+<div class="vehiculos-en-taller-container">
+    <h1 class="vehiculos-en-taller-heading">Vehículos en Taller</h1>
+    <ul class="vehiculos-en-taller-ul">
+        {% for vehiculo in vehiculos_en_taller %}
+            <li class="vehiculos-en-taller-item">
+                {{ vehiculo.placa }} - {{ vehiculo.marca }} - {{ vehiculo.modelo }}             
+                <a href="{% url 'detalle_perfil' vehiculo.cliente.id %}" class="vehiculos-en-taller-link">
+                    <img class="icon-barra" src="{% static 'css/svg/detalles_perfil.svg' %}" alt="">Datos del propietario
+                </a>
+            </li>
+        {% empty %}
+            <li class="vehiculos-en-taller-item">No hay vehículos en taller.</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'menu_recepcionista' %}" class="button-atras">
+        <img class="icon-atras" src="{% static 'css/svg/cancelar.svg' %}" alt="">Volver Pagina Principal
+    </a>
+</div>
+{% endblock %}

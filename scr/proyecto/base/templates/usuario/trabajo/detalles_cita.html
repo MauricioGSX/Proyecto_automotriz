@@ -1,0 +1,28 @@
+{% extends "diseño/usuario.html" %}
+
+{% block content %}
+<div class="detalle-cita-container">
+    <h1 class="detalle-cita-heading">Detalles de la Cita</h1>
+    <div class="detalle-cita-info">
+        <p class="detalle-cita-item">Fecha: {{ cita.fecha }}</p>
+        <p class="detalle-cita-item">Horario: {{ cita.horario }}</p>
+        <!-- Otros detalles de la cita aquí -->
+    </div>
+
+    {% if cita.trabajo_set.exists %}
+    <h2 class="detalle-cita-subheading">Trabajos realizados:</h2>
+    <table class="detalle-cita-table">
+        {% for trabajo in cita.trabajo_set.all %}
+        <tr class="detalle-cita-row">
+            <td class="detalle-cita-description">{{ trabajo.descripcion }}</td>
+            <td class="detalle-cita-status">{{ trabajo.estado }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p class="detalle-cita-no-work">No se han realizado trabajos.</p>
+    {% endif %}
+
+    <a class="detalle-cita-link" href="{% url 'listar_citas' %}">Regresar a Citas</a>
+</div>
+{% endblock %}

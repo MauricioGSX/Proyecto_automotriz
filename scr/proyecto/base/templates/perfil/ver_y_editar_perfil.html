@@ -1,0 +1,25 @@
+{% extends "diseño/usuario.html" %}
+{% block content %}
+    <div class="editar-perfil-container">
+        <h1>Perfil de Usuario</h1>
+        {% load widget_tweaks %}
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="{{ form.numero_telefono.id_for_label }}">Número de Teléfono:</label>
+                {{ form.numero_telefono|add_class:"form-control" }}
+            </div>
+            <div class="form-group">
+                <label for="{{ form.direccion.id_for_label }}">Dirección:</label>
+                {{ form.direccion|add_class:"form-control" }}
+            </div>
+            <div class="form-group">
+                <label for="{{ form.fecha_nacimiento.id_for_label }}">Fecha de Nacimiento:</label>
+                {{ form.fecha_nacimiento|add_class:"form-control" }}
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </form><br>
+        <a href="{% url 'cambiar_contraseña' %}" class="crear-cita-link">Cambiar contraseña</a> |
+        <a href="{% url 'ver_y_editar_perfil' %}" class="crear-cita-link">Editar Perfil</a>
+    </div>
+{% endblock %}

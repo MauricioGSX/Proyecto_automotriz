@@ -1,0 +1,20 @@
+{% extends 'diseño/recepcion.html' %}
+
+{% block content %}
+<div class="container">
+    <main class="content-container">
+        {% for noticia in noticias %}
+        <div class="card mb-3">
+            <img src="{{ noticia.imagen_url }}" class="imagen-card">
+            <div class="card-body">
+                <h5 class="card-title">{{ noticia.title }}</h5>
+                {% autoescape off %}
+                <p class="card-text">{{ noticia.description }}</p>
+                {% endautoescape %}
+                <p class="card-text"><small class="text-muted">{{ noticia.user.username|capfirst }} - {{ noticia.tiempo_transcurrido }}</small></p>
+            </div>
+        </div>
+        {% endfor %}
+    </main>
+</div>
+{% endblock content %}

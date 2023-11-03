@@ -1,0 +1,21 @@
+{% extends "diseño/usuario.html" %}
+
+{% block content %}
+<div class="mis-vehiculos-container">
+    <h1 class="mis-vehiculos-heading">Mis Vehículos</h1>
+    {% if vehiculos %}
+        <ul class="mis-vehiculos-list">
+            {% for vehiculo in vehiculos %}
+                <li class="mis-vehiculo-item">
+                    Marca: {{ vehiculo.marca }} | Modelo: {{ vehiculo.modelo }} | Placa: {{ vehiculo.placa }}
+                    | <a href="{% url 'eliminar_vehiculo' vehiculo.id %}" class="mis-vehiculo-link">Eliminar</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p class="mis-vehiculos-message">{{ user.username }} no tiene vehículos registrados - <a href="{% url 'registrar_vehiculo'%}" class="mis-vehiculo-link">Registrar Vehículo</a></p>
+    {% endif %}
+    <br>
+    <a href="{% url 'menu_usuario' %}" class="mis-vehiculo-link">Regresar al Menú</a>
+</div>
+{% endblock %}

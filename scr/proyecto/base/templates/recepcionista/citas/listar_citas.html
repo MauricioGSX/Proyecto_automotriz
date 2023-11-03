@@ -1,0 +1,37 @@
+{% extends "diseño/recepcion.html" %}
+{% load static %}
+
+{% block content %}
+<div class="listado-citas-container">
+  <h1 class="listado-citas-heading">Listado de Citas</h1>
+  <ul class="listado-citas-ul">
+      {% for cita in citas %}
+          <li class="listado-citas-item">
+              <table class="listado-citas-table">
+                  <tr>
+                      <td>Vehículo: {{ cita.vehiculo }}</td>
+                      <td> | </td>
+                      <td>Fecha: {{ cita.fecha|date:"d/m/Y" }}</td>
+                      <td> | </td>
+                      <td>Mecánico: {{ cita.mecanico }}</td>
+                      <td> | </td>
+                      <td>Horario: {{ cita.horario }}</td>
+                      <td> | </td>
+                      <td>Estado: {{ cita.estado }}</td>
+                  </tr>
+              </table>
+              <table class="listado-citas-buttons">
+                  <tr>
+                      <td><button class="listado-citas-link"><a href="{% url 'detalles_cita_recepcion' cita_id=cita.id %}" class="listado-citas-texto" >Detalles</a></button></td>
+                      <td><button class="listado-citas-link"><a href="{% url 'agregar_trabajo' cita_id=cita.id %}" class="listado-citas-texto">Agregar Trabajo</a></button></td>
+                      <td><button class="listado-citas-link"><a href="{% url 'agregar_checklist' cita_id=cita.id %}" class="listado-citas-texto">CheckList</a></button></td>
+                  </tr>
+              </table>
+          </li>
+      {% endfor %}
+  </ul>
+
+  <a href="{% url 'menu_recepcionista' %}" class="button-atras">
+    <img class="icon-atras" src="{% static 'css/svg/cancelar.svg' %}" alt="">Volver Pagina Principal
+</a>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "diseño/usuario.html" %}
+
+{% block content %}
+<div class="eliminar-vehiculo-container">
+    <h1 class="eliminar-vehiculo-heading">Eliminar Vehículo</h1>
+    <form method="post" class="eliminar-vehiculo-form">
+        {% csrf_token %}
+        <p class="eliminar-vehiculo-message">¿Deseas eliminar el vehículo {{ vehiculo.placa }}?</p>
+        <input type="submit" value="Eliminar" class="eliminar-vehiculo-button">
+    </form>
+    <a href="{% url 'lista_vehiculos_usuario' %}" class="eliminar-vehiculo-link">Volver</a>
+</div>
+{% endblock %}

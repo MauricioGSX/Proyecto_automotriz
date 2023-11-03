@@ -1,0 +1,25 @@
+{% extends 'diseño/login.html' %}    
+{% block content %} 
+<section>
+    <p class="registrarse">¿No tienes una cuenta? <a href="{% url 'registro' %}" class="button">Registrate</a> </p> <br>
+    <hr>
+    <div class="login">
+        <h1>Bienvenido a Gestor de recepción</h1>
+        <p>Ingrese sus datos para poder acceder al Sistema de Reserva</p>
+        <br><br>
+        <form method="POST">
+            {% csrf_token %}
+            <p class="text-center">Usuario : </p>
+            <div class="input-login">{{form.username}}</div>
+            <p class="text-center">Contraseña:</p>
+            {{form.password}} <br>
+            <input class="ingreso" type="submit" value="Ingresar">
+        </form>
+        <p>No tiene una cuenta ? <a href="{% url 'registro' %}"> Registrate</a></p>
+    </div>
+</section>
+<script>
+    document.querySelector('#id_username').setAttribute('placeholder', 'Ingresar su Usuario');
+    document.querySelector('#id_password').setAttribute('placeholder', 'Ingresar su Password')
+</script>
+{% endblock content %}   

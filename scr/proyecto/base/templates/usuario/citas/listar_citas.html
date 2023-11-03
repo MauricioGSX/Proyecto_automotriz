@@ -1,0 +1,29 @@
+{% extends "diseño/usuario.html" %}
+
+{% block content %}
+    <div class="mi-pagina-bodyx">
+        <h1>Listado de Citas</h1>
+        <table class="mi-pagina-tablex">
+            <tr>
+                <th>Vehiculo</th>
+                <th>Fecha</th>
+                <th>Horario</th>
+                <th>Sucursal</th>
+                <th>Mecanico</th>
+                <th>Acción</th>
+            </tr>
+            {% for cita in citas %}
+            <tr>
+                <td>{{ cita.vehiculo }}</td>
+                <td>{{ cita.fecha|date:"d/m/Y" }}</td>
+                <td>{{ cita.horario }}</td>
+                <td>{{ cita.sucursal }}</td>
+                <td>{{ cita.mecanico }}</td>
+                <td><a href="{% url 'detalles_cita' cita_id=cita.id %}">Detalles</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="{% url 'crear_cita' %}" class="crear-cita-link">Crear nueva cita</a> |
+        <a href="{% url 'menu_usuario' %}" class="crear-cita-link">Regresar al Menú</a>
+    </div>
+{% endblock %}

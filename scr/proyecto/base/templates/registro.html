@@ -1,0 +1,21 @@
+{% extends 'diseño/registro.html' %}  
+
+{% block content %} 
+
+<div class="login">
+    <div class="registro-form">
+        <h1>Registrarse</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.first_name.label_tag }} <br> {{ form.first_name }}<br>
+        {{ form.last_name.label_tag }}<br>  {{ form.last_name }}<br>
+        {{ form.email.label_tag }}<br>  {{ form.email }}<br>
+        {{ form.username.label_tag }}<br>  {{ form.username }}<br>
+        {{ form.password1.label_tag }} <br> {{ form.password1 }}<br>
+        {{ form.password2.label_tag }}<br>  {{ form.password2 }}<br>
+        <input class="ingreso" type="submit" value="Registrar">
+    </form>
+    </div>
+    <p class="registro-redireccion">Ya tiene una cuenta ? <a href="{% url 'login' %}">Ingresa</a></p>
+</div>
+{% endblock content %}

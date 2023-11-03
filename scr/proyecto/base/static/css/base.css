@@ -1,0 +1,1138 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #646464;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navtab {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navtab li {
+    margin-right: 20px;
+}
+
+.navtab li:last-child {
+    margin-right: 0;
+}
+
+.navtab li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.profile-name {
+    font-size: 18px;
+}
+
+.content {
+    padding: 20px;
+}
+
+/* Estilos base */
+.mi-pagina-bodyx {
+    width: 100%;
+    padding: 10px;
+    margin: 0 auto;
+    max-width: 800px; 
+    border-radius: 10px;
+    background-color: white;
+}
+
+.mi-pagina-bodyx h1 {
+    text-align: center;
+    color: #333;
+}
+
+.mi-pagina ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mi-pagina-tablex {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(182, 182, 182, 0.1);
+    margin-bottom: 20px;
+}
+
+.mi-pagina-tablex th {
+    padding: 10px;
+    border: 1px solid rgb(192, 191, 191);
+    text-align: center;
+}
+
+.mi-pagina-tablex td {
+    padding: 10px;
+    border: 1px solid rgb(192, 191, 191);
+    text-align: center;
+}
+
+.mi-pagina-tablex td:nth-child(odd) {
+    background-color: #f5f5f5;
+}
+
+.mi-pagina-bodyx a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.mi-pagina-bodyx a:hover {
+    color: #0056b3;
+}
+
+/* Estilos para hacerlo responsive */
+@media (max-width: 768px) {
+    .mi-pagina-bodyx {
+        padding: 10px;
+    }
+
+    .mi-pagina-tablex {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .mi-pagina-tablex td {
+        white-space: nowrap;
+    }
+}
+
+
+/* Estilo para el contenedor principal */
+.detalle-cita-container {
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el encabezado principal */
+.detalle-cita-heading {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Estilo para la información de la cita */
+.detalle-cita-info {
+    margin-bottom: 20px;
+}
+
+.detalle-cita-item {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #555;
+}
+
+/* Estilo para el subencabezado de trabajos realizados */
+.detalle-cita-subheading {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Estilo para la tabla de trabajos realizados */
+.detalle-cita-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.detalle-cita-row {
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilo para las celdas de descripción y estado */
+.detalle-cita-description,
+.detalle-cita-status {
+    padding: 10px;
+    text-align: left;
+}
+
+/* Estilo para el mensaje "No se han realizado trabajos" */
+.detalle-cita-no-work {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #777;
+}
+
+/* Estilo para el enlace "Regresar a Citas" */
+.detalle-cita-link {
+    display: block;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.detalle-cita-link:hover {
+    color: #0056b3;
+}
+
+
+/* Estilo para el contenedor principal */
+.registro-vehiculo-container {
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el encabezado */
+.registro-vehiculo-heading {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Estilo para el mensaje de registro */
+.registro-vehiculo-message {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Estilo para el formulario */
+.registro-vehiculo-form {
+    margin-bottom: 20px;
+}
+
+/* Estilo para el botón de registro */
+.registro-vehiculo-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: auto;
+    display: block;
+}
+
+.registro-vehiculo-button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para el enlace de regreso */
+.registro-vehiculo-link {
+    display: block;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.registro-vehiculo-link:hover {
+    color: #0056b3;
+}
+
+
+/* Estilo para el contenedor principal */
+.crear-cita-container {
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el encabezado */
+.crear-cita-heading {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Estilo para el formulario */
+.crear-cita-form {
+    margin-bottom: 20px;
+}
+
+/* Estilo para el botón de crear cita */
+.crear-cita-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.crear-cita-button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para los enlaces */
+.crear-cita-link {
+    display: inline-block;
+    font-size: 16px;
+    text-decoration: none;
+    color: #007bff;
+    margin-right: 10px;
+}
+
+.crear-cita-link:hover {
+    color: #0056b3;
+}
+
+/* Estilo para el contenedor principal */
+.mis-vehiculos-container {
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el encabezado */
+.mis-vehiculos-heading {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Estilo para la lista de vehículos */
+.mis-vehiculos-list {
+    list-style: none;
+    padding: 0;
+}
+
+/* Estilo para los elementos de vehículo */
+.mis-vehiculo-item {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Estilo para los enlaces */
+.mis-vehiculo-link {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.mis-vehiculo-link:hover {
+    color: #0056b3;
+}
+
+/* Estilo para el mensaje */
+.mis-vehiculos-message {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Estilo para el contenedor principal */
+.eliminar-vehiculo-container {
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el encabezado */
+.eliminar-vehiculo-heading {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Estilo para el mensaje */
+.eliminar-vehiculo-message {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Estilo para el formulario */
+.eliminar-vehiculo-form {
+    margin-bottom: 20px;
+}
+
+/* Estilo para el botón de eliminar */
+.eliminar-vehiculo-button {
+    background-color: #f80505;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.eliminar-vehiculo-button:hover {
+    background-color: #f35a5a;
+}
+
+/* Estilo para el enlace de volver */
+.eliminar-vehiculo-link {
+    display: inline-block;
+    font-size: 16px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.eliminar-vehiculo-link:hover {
+    color: #0056b3;
+}
+
+
+/* Estilo para el contenedor principal */
+.agenda-diaria-container {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el encabezado */
+.agenda-diaria-heading {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+/* Estilo para la tabla */
+.agenda-diaria-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Estilo para las celdas de la tabla */
+.agenda-diaria-table th,
+.agenda-diaria-table td {
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    text-align: left;
+}
+
+/* Estilo para las filas impares de la tabla */
+.agenda-diaria-table tbody tr:nth-child(odd) {
+    background-color: #f5f5f5;
+}
+
+/* Estilo para el mensaje de "No hay citas agendadas para hoy" */
+.agenda-diaria-no-citas {
+    font-size: 16px;
+    text-align: center;
+    color: #555;
+}
+
+/* Estilo para el enlace "Volver" */
+.agenda-diaria-link {
+    display: inline-block;
+    font-size: 18px;
+    text-decoration: none;
+    color: #007bff;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.agenda-diaria-link:hover {
+    color: #0056b3;
+}
+
+/* Estilo para el contenedor principal */
+.listado-citas-container {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el encabezado */
+.listado-citas-heading {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+/* Estilo para la lista de citas */
+.listado-citas-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilo para cada elemento de la lista de citas */
+.listado-citas-item {
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para la tabla de detalles de cita */
+.listado-citas-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+/* Estilo para las celdas de la tabla */
+.listado-citas-table td {
+    padding: 8px;
+}
+
+/* Estilo para los botones de acción */
+.listado-citas-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilo para los enlaces de acción */
+.listado-citas-link {
+    padding: 10px 50px 10px;
+    border: 2px solid #23a9f7;
+    text-decoration: none;
+    background-color: #47c1f1;
+    transition: color 0.3s ease;
+    border-radius: 0.5rem;
+    cursor: auto;
+}
+
+.listado-citas-link:hover {
+    background-color: #5fc9f3;
+    cursor: auto
+}
+
+.listado-citas-texto {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+/* Estilo para el contenedor principal */
+.vehiculos-en-taller-container {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 35px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el encabezado */
+.vehiculos-en-taller-heading {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+/* Estilo para la lista de vehículos en taller */
+.vehiculos-en-taller-ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilo para cada elemento de la lista de vehículos en taller */
+.vehiculos-en-taller-item {
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para los enlaces de propietario */
+.vehiculos-en-taller-link {
+    margin-left: 15px;
+    display: inline-flex;
+    text-decoration: none;
+    background-color: #2690fa;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    align-items: center; /* Centra verticalmente los elementos en el botón */
+}
+
+.vehiculos-en-taller-link:hover{
+    color: white;
+    background-color: #62acf7;
+}
+
+/* Estilo para el enlace de regreso */
+.vehiculos-en-taller-link:last-child {
+    margin-right: 0;
+}
+
+
+
+/* Estilo para el contenedor principal */
+.modificar-checklist-container {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el encabezado */
+.modificar-checklist-heading {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+/* Estilo para el formulario de checklist */
+.checklist-form {
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Estilo para los botones */
+.checklist-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.checklist-button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para el enlace de regreso */
+.checklist-link {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 18px;
+    margin-top: 20px;
+    transition: color 0.3s ease;
+}
+
+.checklist-link:hover {
+    color: #0056b3;
+}
+
+/* Estilo para el contenedor principal */
+.agregar-trabajo-container {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el encabezado */
+.agregar-trabajo-heading {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+/* Estilo para el formulario de trabajo */
+.trabajo-form {
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Estilo para la etiqueta "Descripción" */
+.trabajo-label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Estilo para el campo de entrada de texto */
+input[type="text"] {
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilo para los botones */
+.trabajo-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.trabajo-button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para el enlace de regreso */
+.trabajo-link {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 18px;
+    margin-top: 20px;
+    transition: color 0.3s ease;
+}
+
+.trabajo-link:hover {
+    color: #0056b3;
+}
+
+/* Estilos para el encabezado */
+.editar-trabajo h1 {
+    font-size: 24px;
+    color: #333;
+    margin: 0 auto;
+    /* Establece los márgenes izquierdo y derecho en "auto" */
+    text-align: center;
+    /* Centra el texto horizontalmente */
+    margin-bottom: 20px;
+}
+
+
+/* Estilos para el formulario */
+.editar-trabajo form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Estilos para los campos del formulario */
+.editar-trabajo form p {
+    margin: 10px 0;
+}
+
+/* Estilos para el botón */
+.editar-trabajo button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 auto;
+    /* Establece los márgenes izquierdo y derecho en "auto" para centrar horizontalmente */
+    display: block;
+}
+
+.editar-trabajo button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para el enlace de cancelar */
+.editar-trabajo a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 16px;
+}
+
+.editar-trabajo a:hover {
+    text-decoration: underline;
+}
+
+
+.detalle-perfil .container {
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+/* Título principal */
+.detalle-perfil .container h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Texto del párrafo */
+.detalle-perfil .container p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Enlaces */
+.detalle-perfil .container a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.detalle-perfil .container a:hover {
+    text-decoration: none;
+}
+
+/* Botón */
+.detalle-perfil .container button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.detalle-perfil .container button:hover {
+    background-color: #0056b3;
+}
+
+.cambio-contraseña-container {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cambio-contraseña-container h1 {
+    text-align: center;
+}
+
+.contraseña-form-group {
+    margin-bottom: 20px;
+}
+
+.cambio-contraseña-container label {
+    display: block;
+    font-weight: bold;
+}
+
+.cambio-contraseña-container input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contraseña-error-message {
+    color: #ff0000;
+}
+
+.cambio-contraseña-container button {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.cambio-contraseña-container button:hover {
+    background-color: #0056b3;
+}
+
+.editar-perfil-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.editar-perfil-container h1 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.editar-perfil-container label {
+    font-weight: bold;
+}
+
+.editar-perfil-container input[type="text"] {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+
+.agregar-mecanico-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.agregar-mecanico-container h1 {
+    text-align: center;
+}
+
+.agregar-mecanico-container mechanic-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.agregar-mecanico-container form-group {
+    margin-bottom: 20px;
+}
+
+.agregar-mecanico-container label {
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    font-size: 15px;
+    padding: 15px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 72%;
+}
+
+.button-container {
+    text-align: center;
+}
+
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+
+.listar-mecanico-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.listar-mecanico-container h1 {
+    text-align: center;
+}
+
+.mechanic-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.mechanic-list li {
+    margin-bottom: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.delete-link {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.delete-link:hover {
+    text-decoration: underline;
+}
+
+.add-mechanic-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.add-mechanic-link:hover {
+    text-decoration: underline;
+}
+
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+    margin: auto;
+    width: 40%;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 1rem 1rem;
+}
+
+.card-title {
+    margin-bottom: .5rem;
+    font-size: 20px;
+}
+
+.card-text:last-child {
+    text-align: right;
+    margin-bottom: 0;
+}
+
+.imagen-card {
+    width: 100%;
+    height: auto;
+}
+
+.text-muted {
+    color: #6c757d;
+}
+
+.mb-3 {
+    margin-bottom: 1rem;
+}
+
+.button-atras {
+    display: inline-flex;
+    text-decoration: none;
+    background-color: #ff1515dc;
+    color: #ffffff;
+    padding: 5px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    align-items: center; /* Centra verticalmente los elementos en el botón */
+  }
+
+  .button-atras:hover {
+    background-color: #ff5656;
+  }
+
+  .icon-atras {
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+
+  .button-barra {
+    display: inline-flex;
+    font-size: 15px;
+    text-decoration: none;
+    background-color: #ff1515dc;
+    color: #ffffff;
+    padding: 3px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    align-items: center; /* Centra verticalmente los elementos en el botón */
+  }
+
+  .button-barra:hover {
+    background-color: #ff5656;
+  }
+
+  .icon-barra {
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+
+.add-mechanic{
+    display: inline-flex;
+    text-decoration: none;
+    background-color: rgb(219, 219, 219) ;
+    color: #535353dc;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    align-items: center; 
+}
+
+  .add-mechanic:hover {
+    background-color: #e7e7e7;
+  }

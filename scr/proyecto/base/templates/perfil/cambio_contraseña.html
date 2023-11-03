@@ -1,0 +1,52 @@
+{% extends "diseño/usuario.html" %}
+{% block content %}
+<div class="cambio-contraseña-container">
+    <h1>Cambio de Contraseña</h1>
+    <form method="post">
+        {% csrf_token %}
+
+        <div class="contraseña-form-group">
+            <label for="{{ form.old_password.id_for_label }}">Contraseña actual:</label>
+            {{ form.old_password }}
+            {% if form.old_password.errors %}
+            <div class="contraseña-error-message">{{ form.old_password.errors }}</div>
+            {% endif %}
+        </div>
+
+        <div class="contraseña-form-group">
+            <label for="{{ form.new_password1.id_for_label }}">Nueva contraseña:</label>
+            {{ form.new_password1 }}
+            {% if form.new_password1.errors %}
+            <div class="contraseña-error-message">
+                {% for error in form.new_password1.errors %}
+                    {{ error|escape }}
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+
+        <div class="contraseña-form-group">
+            <label for="{{ form.repeat_new_password.id_for_label }}">Repetir Nueva Contraseña:</label>
+            {{ form.repeat_new_password }}
+            {% if form.repeat_new_password.errors %}
+            <div class="contraseña-error-message">{{ form.repeat_new_password.errors }}</div>
+            {% endif %}
+        </div>
+
+        <div class="contraseña-form-group ">
+            {% if form.non_field_errors %}
+            <div class="contraseña-error-message">
+                {% for error in form.non_field_errors %}
+                    {{ error|escape }}
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+
+        <button type="submit">Cambiar Contraseña</button>
+    </form><br>
+    <a href="{% url 'cambiar_contraseña' %}" class="crear-cita-link">Cambiar contraseña</a> |
+    <a href="{% url 'ver_y_editar_perfil' %}" class="crear-cita-link">Editar Perfil</a>
+</div>
+{% endblock %}
+

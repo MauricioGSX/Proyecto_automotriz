@@ -1,0 +1,20 @@
+{% extends "diseño/recepcion.html" %}
+{% load static %}
+{% block content %}
+<div class="agregar-mecanico-container">
+    <h1>Agregar Mecánico</h1>
+    <form method="post" class="mechanic-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <div class="button-container">
+            <button type="submit" class="btn btn-primary">Agregar Mecanico</button>
+        </div>
+    </form>
+    <div class="back-link">
+    <a href="{% url 'lista_mecanicos' %}" class="button-atras">
+        <img class="icon-atras" src="{% static 'css/svg/cancelar.svg' %}" alt="">Volver a la lista de Mecánicos
+    </a></div>
+</div>
+{% endblock %}
+

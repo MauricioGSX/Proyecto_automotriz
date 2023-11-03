@@ -1,0 +1,23 @@
+{% extends "diseño/recepcion.html" %}
+
+{% block content %}
+<div class="agregar-trabajo-container">
+    <h1 class="agregar-trabajo-heading">Agregar Trabajo a la Cita</h1>
+    <form method="post" class="trabajo-form">
+        {% csrf_token %}
+        
+        <div class="form-group">
+            <label for="descripcion" class="trabajo-label">Descripción:</label>
+            {{ trabajo_form.descripcion }}
+        </div>
+
+        <div class="form-group">
+            <label for="estado" class="trabajo-label">Estado:</label>
+            {{ trabajo_form.estado }}
+        </div>
+        
+        <button type="submit" class="trabajo-button">Guardar Trabajo</button>
+    </form>
+    <a href="{% url 'listar_citas_recepcion' %}" class="trabajo-link">Volver a Listado de Citas</a>
+</div>
+{% endblock %}

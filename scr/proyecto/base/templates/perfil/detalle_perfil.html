@@ -1,0 +1,23 @@
+{% extends "diseño/recepcion.html" %}
+
+{% block content %}
+<div class="detalle-perfil">
+    {% if datos_modificados %}
+    <div class="container">
+        <h1>Detalle de Perfil de {{ usuario.username }}</h1>
+        <p>Número de Teléfono: {{ perfil.numero_telefono }}</p>
+        <p>Dirección: {{ perfil.direccion }}</p>
+        <p>Fecha de Nacimiento: {{ perfil.fecha_nacimiento }}</p>
+        <br>
+        <a href="{% url 'vehiculos_en_taller' %}" class="atras">Regresar al Menú</a>
+    </div>
+    {% else %}
+    <div class="container">
+        <p>El usuario no ha modificado sus datos en el perfil.</p>
+        <a href="{% url 'vehiculos_en_taller' %}" class="atras">Regresar al Menú</a>
+    </div>
+    {% endif %}
+
+    
+</div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "diseño/recepcion.html" %}
+
+{% block content %}
+<div class="modificar-checklist-container">
+    <h1 class="modificar-checklist-heading">Modificar Checklist de la Cita</h1>
+    <form method="post" class="checklist-form">
+        {% csrf_token %}
+        {{ checklist_form.as_p }}
+        <button type="submit" class="checklist-button">Guardar Checklist</button>
+    </form>
+    <a href="{% url 'listar_citas_recepcion' %}" class="checklist-link">Volver a Listado de Citas</a>
+</div>
+{% endblock %}

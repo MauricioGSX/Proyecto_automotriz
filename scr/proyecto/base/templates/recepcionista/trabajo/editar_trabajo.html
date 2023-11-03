@@ -1,0 +1,20 @@
+{% extends "diseño/recepcion.html" %}
+
+{% block content %}
+<div class="editar-trabajo">
+  <h1>Editar Trabajo</h1>
+  <form method="post">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="{{ form.descripcion.id_for_label }}">Descripción:</label>
+      {{ form.descripcion }}
+    </div>
+    <div class="form-group">
+      <label for="{{ form.estado.id_for_label }}">Estado:</label>
+      {{ form.estado }}
+    </div><br>
+    <button type="submit">Guardar Cambios</button>
+  </form>
+  <a href="{% url 'detalles_cita_recepcion' cita_id=object.cita_id %}">Cancelar y Volver a Detalles de la Cita</a>
+</div>
+{% endblock %}

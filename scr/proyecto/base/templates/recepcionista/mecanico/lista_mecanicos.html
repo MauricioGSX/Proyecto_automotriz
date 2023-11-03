@@ -1,0 +1,21 @@
+{% extends "diseño/recepcion.html" %}
+{% load static %}
+{% block content %}
+<div class="listar-mecanico-container">
+    <h1>Lista de Mecánicos</h1>
+    <ul class="mechanic-list">
+        {% for mecanico in mecanicos %}
+            <li>{{ mecanico.nombre }} 
+                <a href="{% url 'eliminar_mecanico' mecanico.id %}" class="delete-link">
+                    <img  src="{% static 'css/svg/eliminar.svg' %}" alt="">
+                </a>
+        {% endfor %}
+    </ul>
+    <div class="add-mechanic-link">
+    <a href="{% url 'agregar_mecanico' %}" class="add-mechanic">
+        <img class="icon-atras" src="{% static 'css/svg/profile_add.svg' %}" alt="">Agregar Mecanico
+    </a>
+    </div>
+</div>
+{% endblock %}
+

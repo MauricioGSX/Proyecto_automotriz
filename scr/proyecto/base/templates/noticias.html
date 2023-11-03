@@ -1,0 +1,10 @@
+{% for noticia in noticias %}
+<div class="card mb-3">
+    <img src="{{ noticia.imagen_url }}" class="imagen-card">
+    <div class="card-body">
+        <h5 class="card-title">{{ noticia.title }}</h5>
+        <p class="card-text">{{ noticia.description }}</p>
+        <p class="card-text"><small class="text-muted">{{ noticia.user.username }} - Creado hace 3 Minutos</small></p>
+    </div>
+</div>
+{% endfor %}

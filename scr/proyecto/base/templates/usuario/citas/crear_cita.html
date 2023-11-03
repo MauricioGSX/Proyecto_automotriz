@@ -1,0 +1,14 @@
+{% extends "diseño/usuario.html" %}
+
+{% block content %}
+<div class="crear-cita-container">
+    <h1 class="crear-cita-heading">Crear Nueva Cita</h1>
+    <form method="post" class="crear-cita-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="crear-cita-button">Crear Cita</button>
+    </form>
+    <a href="{% url 'listar_citas' %}" class="crear-cita-link">Ir a lista de citas</a> |
+    <a href="{% url 'menu_usuario' %}" class="crear-cita-link">Regresar al Menú</a>
+</div>
+{% endblock %}
